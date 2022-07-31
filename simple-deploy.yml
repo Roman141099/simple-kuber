@@ -26,7 +26,15 @@ spec:
           failureThreshold: 3
           httpGet:
             port: 8080
-            path: /bye
+            path: /readiness
           initialDelaySeconds: 5
           periodSeconds: 5
           timeoutSeconds: 1
+        livenessProbe:
+          initialDelaySeconds: 10
+          timeoutSeconds: 1
+          httpGet:
+            path: /liveness
+            port: 8080
+          periodSeconds: 10
+          failureThreshold: 3
