@@ -9,7 +9,7 @@ spec:
   replicas: 2
   strategy:
     rollingUpdate:
-      maxSurge: 1
+      maxSurge: 2
       maxUnavailable: 0
     type: RollingUpdate
   template:
@@ -26,7 +26,7 @@ spec:
           failureThreshold: 3
           httpGet:
             port: 8080
-            path: /hello
+            path: /bye
           initialDelaySeconds: 5
           periodSeconds: 5
           timeoutSeconds: 1
