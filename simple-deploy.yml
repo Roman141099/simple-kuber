@@ -19,14 +19,14 @@ spec:
     spec:
       containers:
       - name: simple-java
-        image: romajanlyi/simple-java-app:1.1-with-fail
+        image: romajanlyi/simple-java-app:1.1
         ports:
           - containerPort: 8080
         readinessProbe:
           failureThreshold: 3
           httpGet:
             port: 8080
-            path: /fail
+            path: /hello
           initialDelaySeconds: 5
           periodSeconds: 5
           timeoutSeconds: 1
