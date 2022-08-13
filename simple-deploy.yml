@@ -38,3 +38,8 @@ spec:
             port: 8082
           periodSeconds: 10
           failureThreshold: 3
+        resources:
+          limits:
+            memory: "300Mi"
+          requests:
+            memory: "100Mi"
