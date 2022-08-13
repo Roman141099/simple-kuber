@@ -22,6 +22,7 @@ spec:
         image: romajanlyi/simple-java-app:latest
         ports:
           - containerPort: 8080
+          - containerPort: 8082
         readinessProbe:
           failureThreshold: 3
           httpGet:
