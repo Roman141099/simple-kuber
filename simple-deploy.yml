@@ -19,14 +19,14 @@ spec:
     spec:
       containers:
       - name: simple-java
-        image: romajanlyi/simple-java-app:1.4
+        image: romajanlyi/simple-java-app:latest
         ports:
           - containerPort: 8080
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            port: 8080
-            path: /readiness
+            port: 8082
+            path: /management-simple-spring/monitoring/health
           initialDelaySeconds: 5
           periodSeconds: 5
           timeoutSeconds: 1
@@ -34,7 +34,7 @@ spec:
           initialDelaySeconds: 10
           timeoutSeconds: 1
           httpGet:
-            path: /liveness
-            port: 8080
+            path: /management-simple-spring/monitoring/beans
+            port: 8082
           periodSeconds: 10
           failureThreshold: 3
