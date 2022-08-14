@@ -45,7 +45,7 @@ spec:
             memory: "100Mi"
         volumeMounts:
           - name: simple-spring-config
-            mountPath: /config
+            mountPath: config/
       volumes:
         - name: simple-spring-config
           configMap:
