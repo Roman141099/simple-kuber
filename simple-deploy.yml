@@ -22,6 +22,12 @@ spec:
         image: romajanlyi/simple-java-app:with-secret
         ports:
           - containerPort: 8080
+        env:
+          - name: SECRET_WORD
+            valueFrom:
+              secretKeyRef:
+                name: simple-secret
+                key: secret-word
         readinessProbe:
           failureThreshold: 3
           httpGet:
