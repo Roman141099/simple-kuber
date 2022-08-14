@@ -5,3 +5,4 @@ metadata:
 data:
   application.yml: |
     hello-word: Hello
+    secret-word: ${SECRET_WORD}
