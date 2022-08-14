@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simple-spring-config
+data:
+  application.yml: |
+    hello-word: Hello
