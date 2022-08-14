@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: simple-java
-        image: romajanlyi/simple-java-app:with-cm
+        image: romajanlyi/simple-java-app:with-secret
         ports:
           - containerPort: 8080
         readinessProbe:
