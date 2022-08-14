@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: simple
-  replicas: 2
+  replicas: 6
   strategy:
     rollingUpdate:
       maxSurge: 50%
