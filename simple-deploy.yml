@@ -9,8 +9,8 @@ spec:
   replicas: 6
   strategy:
     rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 100%
+      maxSurge: 30%
+      maxUnavailable: 30%
     type: RollingUpdate
   template:
     metadata:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: simple-java
-        image: romajanlyi/simple-java-app:1.7
+        image: romajanlyi/simple-java-app:1.8
         ports:
           - containerPort: 8080
         readinessProbe:
