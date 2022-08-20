@@ -57,7 +57,13 @@ spec:
         volumeMounts:
           - name: simple-spring-config
             mountPath: /app/target/config
+          - name: mount-secret
+            mountPath: /app/target/secrets
       volumes:
         - name: simple-spring-config
           configMap:
             name: simple-spring-config
+        - name: mount-secret
+          secret:
+            secretName: mount-secret
+            optional: false
