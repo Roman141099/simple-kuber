@@ -28,11 +28,11 @@ spec:
               secretKeyRef:
                 name: simple-secret
                 key: secret-word
-          - name: TEST_CM_WORD
+          - name: TEST_2_D_WORD
             valueFrom:
-              configMapKeyRef:
-                name: test-cm
-                key: test
+              secretKeyRef:
+                name: simple-secret
+                key: secret-second-word
         readinessProbe:
           failureThreshold: 3
           httpGet:
