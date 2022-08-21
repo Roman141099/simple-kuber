@@ -6,7 +6,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /simple-spring
+          - path: /
             pathType: Prefix
             backend:
               service:
