@@ -1,18 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-simple
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: ingress-hosts
 spec:
-  ingressClassName: nginx-example
   rules:
-    - http:
+    - host: www.romajan.net
+      http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: simple-svc
-                port:
-                  number: 80
+          - backend:
+              serviceName: simple-svc
+              servicePort: 80
