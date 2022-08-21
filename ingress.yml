@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta
+kind: Ingress
+metadata:
+  name: ingress-hosts
+spec:
+  rules:
+    - host: www.romajan.net
+      http:
+        paths:
+          - backend:
+              serviceName: simple-svc
+              servicePort: 80
