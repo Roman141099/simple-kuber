@@ -2,11 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-deploy
+  namespace: simple
 spec:
   selector:
     matchLabels:
       app: simple
-  replicas: 2
+  replicas: 1
   strategy:
     rollingUpdate:
       maxSurge: 2
