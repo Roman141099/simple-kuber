@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: simple-ingress-vs
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - simple-ingress-gw
+  http:
+    - match:
+        - uri:
+            prefix: /simple-spring/ip
+      route:
+        - destination:
+            host: simple-svc
+            port:
+              number: 80
