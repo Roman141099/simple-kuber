@@ -7,6 +7,7 @@ spec:
   ingressClassName: contour
   rules:
     - http:
+      host: www.romajan-apps.ru
         paths:
           - path: /simple-spring
             pathType: Prefix
