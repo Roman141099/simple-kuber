@@ -31,11 +31,9 @@ spec:
       hostname: kafka-broker
       containers:
         - env:
-            - name: KAFKA_BROKER_ID
-              value: "1"
             - name: KAFKA_ZOOKEEPER_CONNECT
               value: "10.105.190.203:2181"
-            - name: KAFKA_LISTENERS
+            - name: KAFKA_ADVERTISED_LISTENERS
               value: PLAINTEXT://:9092
           image: wurstmeister/kafka
           imagePullPolicy: IfNotPresent
