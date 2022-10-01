@@ -16,7 +16,7 @@ spec:
         app: zookeeper
     spec:
       containers:
-        - image: wurstmeister/zookeeper
+        - image: digitalwonderland/zookeeper
           imagePullPolicy: IfNotPresent
           name: zookeeper
           ports:
