@@ -39,6 +39,8 @@ spec:
               value: PLAINTEXT://:9092
             - name: KAFKA_ADVERTISED_LISTENERS
               value: PLAINTEXT://kafka-broker:9092
+            - name: zookeeper.connection.timeout.ms
+              value: 60000
           image: wurstmeister/kafka
           imagePullPolicy: IfNotPresent
           name: kafka-broker
