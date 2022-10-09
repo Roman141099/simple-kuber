@@ -1,0 +1,13 @@
+metadata:
+  name: graphana-external-test
+  namespace: istio-system
+spec:
+  type: NodePort
+  selector:
+    app: grafana
+  ports:
+    - name: graphana-external-http
+      protocol: TCP
+      port: 3001
+      targetPort: 3000
+      nodePort: 30003
