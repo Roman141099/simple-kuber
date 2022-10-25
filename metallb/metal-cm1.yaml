@@ -5,4 +5,5 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
+    - 194.58.98.140/24
     - 194.58.98.147/24
