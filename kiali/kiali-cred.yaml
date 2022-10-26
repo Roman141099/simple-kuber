@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: kiali-cred-secret
+  namespace: istio-system
+  labels:
+    app: kiali
+data:
+  username: cm9tYWphbg==
+  password: cm9tYWphbg==
