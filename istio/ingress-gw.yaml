@@ -9,7 +9,14 @@ spec:
   servers:
     - port:
         number: 80
-        name: http
+        name: http-dev
         protocol: HTTP
       hosts:
-        - "194.58.98.147"
+        - 'simple.dev'
+    - port:
+        number: 80
+        name: http-prod
+        protocol: HTTP
+      hosts:
+        - 'simple.prod'
+
