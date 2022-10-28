@@ -6,8 +6,10 @@ metadata:
 spec:
   selector:
     app: kiali
+  type: NodePort
   ports:
     - name: kiali-external-http
       protocol: TCP
       port: 20001
       targetPort: 20001
+      nodePort: 30002
