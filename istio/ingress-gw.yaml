@@ -1,3 +1,4 @@
+#Позволяет конфигать порты и хосты istio ингресса
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -5,9 +6,11 @@ metadata:
   namespace: simple
 spec:
   selector:
+#    Селектим под Ingress-а для которого будет эта настройка открытия портов
     istio: ingressgateway
   servers:
     - port:
+#        Открываем порт на ингрессе
         number: 80
         name: http-dev
         protocol: HTTP

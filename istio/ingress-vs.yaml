@@ -1,3 +1,4 @@
+#Добавляет правила маршрутизации запроса на сервис а тот в контейнер пода
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -5,9 +6,11 @@ metadata:
   namespace: simple
 spec:
   hosts:
+#    Заголовки Host из запроса которые принимает данный VS
     - "simple.dev"
     - "simple.prod"
   gateways:
+#    Имя GW к которому прикручен данный VS
     - simple-ingress-gw
   http:
     - match:
@@ -15,6 +18,8 @@ spec:
             prefix: /simple-spring/ip
       route:
         - destination:
+#            Имя ClusterIP сервиса который перенаправит запрос напрямую в Pod с контейнером приклада
             host: simple-svc.simple.svc.cluster.local
             port:
+#              Порт сервиса внутри кластера
               number: 80
