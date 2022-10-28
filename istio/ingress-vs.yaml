@@ -6,7 +6,7 @@ metadata:
   namespace: simple
 spec:
   hosts:
-#    Заголовки Host из запроса которые принимает данный VS
+#    Заголовки Host из запроса которые принимает данный VS(хосты самого ингресса)
     - "simple.dev"
     - "simple.prod"
   gateways:

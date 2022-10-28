@@ -15,6 +15,7 @@ spec:
         name: http-dev
         protocol: HTTP
       hosts:
+#         (хост самого ингресса)
         - 'simple.dev' #Принимать запросы только от заголовков Host
     - port:
         number: 80
