@@ -12,7 +12,7 @@ spec:
         name: http-dev
         protocol: HTTP
       hosts:
-        - 'simple.dev'
+        - 'simple.dev' #Принимать запросы только от заголовков Host
     - port:
         number: 80
         name: http-prod
