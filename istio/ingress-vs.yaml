@@ -6,6 +6,7 @@ metadata:
 spec:
   hosts:
     - "simple.dev"
+    - "simple.prod"
   gateways:
     - simple-ingress-gw
   http:
