@@ -4,7 +4,6 @@ metadata:
   name: kiali-external-test
   namespace: istio-system
 spec:
-  type: NodePort
   selector:
     app: kiali
   ports:
@@ -12,4 +11,3 @@ spec:
       protocol: TCP
       port: 20001
       targetPort: 20001
-      nodePort: 30002
