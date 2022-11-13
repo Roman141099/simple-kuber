@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-deploy
+  name: simple-deploy-rd
   namespace: simple
 spec:
   selector:
@@ -20,9 +20,10 @@ spec:
     spec:
       containers:
       - name: simple-java
-        image: romajanlyi/simple-java-app:with-ip-returning
+        image: romajanlyi/simple-java-app:with-rd
         ports:
           - containerPort: 8080
+          - containerPort: 5005
         env:
           - name: SECRET_WORD
             valueFrom:
